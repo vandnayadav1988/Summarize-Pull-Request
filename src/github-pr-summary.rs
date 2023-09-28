@@ -118,7 +118,7 @@ async fn handler(
         }
     } else {
         // PR OPEN or Trigger phrase: create a new comment
-        match issues.create_comment(pull_number, "Hello, I am a [code review bot](https://github.com/flows-network/github-pr-summary/) on [flows.network](https://flows.network/).\n\nIt could take a few minutes for me to analyze this PR. Relax, grab a cup of coffee and check back later. Thanks!").await {
+        match issues.create_comment(pull_number, "Hello, I am a code review bot.It could take a few minutes for me to analyze this PR. Relax, grab a cup of coffee and check back later. Thanks!").await {
             Ok(comment) => {
                 comment_id = comment.id;
             }
