@@ -197,7 +197,7 @@ async fn handler(
     }
 
     let mut resp = String::new();
-    resp.push_str("Hello, I am a [code review bot](https://github.com/flows-network/github-pr-summary/) on [flows.network](https://flows.network/). Here are my reviews of code commits in this PR.\n\n------\n\n");
+    resp.push_str("Hello, I am a code review bot. Here are my reviews of code commits in this PR.\n\n------\n\n");
     if reviews.len() > 1 {
         log::debug!("Sending all reviews to OpenAI for summarization");
         let co = ChatOptions {
